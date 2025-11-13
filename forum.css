@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ebee;
+    margin: 0;
+    padding: 0;
+}
+
+.forum-header {
+    background-color: #4267b2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: o 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.forum-container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+}
+
+/*Seção de login */
+.login-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    height: fit-content;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #42b72a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-section button:hover {
+    background-color: #369c20;
+}
+
+/* Seção de Comentários */
+.comments-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 2;
+}
+
+.comment-list {
+    margin-top: 20px;
+}
+
+.comment {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.comment-author {
+    font-weight: bold;
+}
+
+.coment-body p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.new-comment {
+    margin-top: 20px;
+}
+
+.new-comment textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.new-comment button {
+    padding: 10px 20px;
+    background-color: #4267b2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.new-comment button:hover {
+    background-color: #365899;
+}
+
+footer {
+    text-aling: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}

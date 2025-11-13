@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Fórum</title>
+    <link rel="stylesheet" href="forum.css">
+</head>
+<body>
+    
+<header class="forum-header">
+    <h1>Bem-vindo ao meu Fórum!</h1>
+</header>
+
+<main class="forum-container">
+    <div class="login-section">
+        <h2>Acesse sua conta</h2>
+        <form id="loginform">
+            <div class="form-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="text" name="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <div class="comments-section">
+        <h2>Comentários</h2>
+        <div class="comment-list">
+            <div class="comment">
+                <div class="comment-header">
+                    <span class="comment-author">Usuário123</span>
+                    <span class="comment-date">06/04/2005</span>
+                </div>
+                <div class="comment-body">
+                    <p>Este é o primeiro comentário. Ótimo fórum!</p>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="comment-header">
+                    <span class="comment-author">Dev_FullStack</span>
+                    <span class="comment-date">07/11/1986</span>
+                </div>
+                <div class="comment-body">
+                    <p>Muito legal a estrutura do site. Parabéns aos criadores!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="new-comment">
+            <h3>Deixe seu comentário:</h3>
+            <textarea id="newCommentText" placeholder="Escreva aqui..." rows="4"></textarea>
+            <button id="postCommentBtn">Publicar</button>
+        </div>
+    </div>
+
+</main>
+        <footer>
+            <p> &copy; 2025 Meu Fórum. Todos os direitos reservados. </p>
+        </footer>
+        
+</body>
+</html>

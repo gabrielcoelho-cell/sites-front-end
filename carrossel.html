@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Fotos</title>
+    
+    <style>
+        /* Estilos CSS para o carrossel */
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="carousel-slide">
+                <img src="C:\Users\gabri\Downloads\2019-03-01-audi-r8-v10-decennium-2019-1600-01.webp" alt="AUDI R8 V10">
+            </div>
+            <div class="carousel-slide">
+                <img src="C:\Users\gabri\Downloads\vehicle_image_1688580863_d41d8cd98f00b204e9800998ecf8427e.jpeg" alt="MERCEDES GLA 200">
+            </div>
+            <div class="carousel-slide">
+                <img src="C:\Users\gabri\Downloads\P90403620_highRes_bmw-m4-competition-x.jpg" alt="BMW M4 COMPETICION">
+            </div>
+        </div>
+
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+    </div>
+
+    <script>
+        // JavaScript para a funcionalidade do carrossel
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = document.querySelector('.next');
+            const prevButton = document.querySelector('.prev');
+            
+            let currentIndex = 0;
+
+            const moveCarousel = () => {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            };
+
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < slides.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0; // Volta para o primeiro slide
+                }
+                moveCarousel();
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = slides.length - 1; // Vai para o último slide
+                }
+                moveCarousel();
+            });
+        });
+    </script>
+
+</body>
+</html>
